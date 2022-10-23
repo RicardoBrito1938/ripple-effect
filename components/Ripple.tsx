@@ -33,7 +33,7 @@ const Ripple: React.FC<RippleProps> = ({ style, onTap, children }) => {
   const width = useSharedValue(0);
   const height = useSharedValue(0);
 
-  const rippleOpacity = useSharedValue(1);
+  const rippleOpacity = useSharedValue(0.8);
 
   const tap = Gesture.Tap()
     .onStart(tapEvent => {
@@ -44,14 +44,14 @@ const Ripple: React.FC<RippleProps> = ({ style, onTap, children }) => {
       centerX.value = tapEvent.x;
       centerY.value = tapEvent.y;
 
-      rippleOpacity.value = 1;
+      rippleOpacity.value = 0.8;
       scale.value = 0;
       scale.value = withTiming(1, { duration: 1000 });
 
       if (onTap) runOnJS(onTap)();
     })
     .onEnd(() => {
-      rippleOpacity.value = withTiming(0, { duration: 700 });
+      rippleOpacity.value = withTiming(0, { duration: 1000 });
     });
 
   const rStyle = useAnimatedStyle(() => {
@@ -65,7 +65,7 @@ const Ripple: React.FC<RippleProps> = ({ style, onTap, children }) => {
       height: circleRadius * 2,
       borderRadius: circleRadius,
       opacity: rippleOpacity.value,
-      backgroundColor: "rgba(0,0,0,2)",
+      backgroundColor: "#00F076",
       position: "absolute",
       top: 0,
       left: 0,

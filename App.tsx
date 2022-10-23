@@ -23,7 +23,7 @@ export default function App() {
             console.log("tap");
           }}
         >
-          <Text>Tap</Text>
+          <Text style={styles.text}>Tap</Text>
         </Ripple>
       </View>
     </GestureHandlerRootView>
@@ -33,17 +33,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  ripple: {
-    width: 200,
-    height: 200,
+    backgroundColor: "#0C0D0D",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "white",
-    borderRadius: 25,
+    padding: 24
+  },
+  ripple: {
+    width: "100%",
+    height: 75,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#4B4E4D",
+    borderRadius: 8,
     //ios
     shadowOpacity: 1,
     shadowOffset: {
@@ -54,11 +55,8 @@ const styles = StyleSheet.create({
     //android
     elevation: 2
   },
-  ball: {
-    width: 100,
-    height: 100,
-    borderRadius: 100,
-    backgroundColor: "blue",
-    alignSelf: "center"
+  text: {
+    color: "white",
+    fontWeight: "700"
   }
 });

@@ -1,15 +1,9 @@
 import React, { ReactNode } from "react";
 import { StyleProp, View, ViewStyle } from "react-native";
-import {
-  Gesture,
-  GestureDetector,
-  TapGestureHandler,
-  TapGestureHandlerGestureEvent
-} from "react-native-gesture-handler";
+import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import Animated, {
   measure,
   runOnJS,
-  useAnimatedGestureHandler,
   useAnimatedRef,
   useAnimatedStyle,
   useSharedValue,

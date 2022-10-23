@@ -2,16 +2,8 @@ import "react-native-gesture-handler";
 
 import { StyleSheet, Text, View } from "react-native";
 import Ripple from "./components/Ripple";
-import Animated, {
-  useAnimatedStyle,
-  useSharedValue,
-  withSpring
-} from "react-native-reanimated";
-import {
-  Gesture,
-  GestureDetector,
-  GestureHandlerRootView
-} from "react-native-gesture-handler";
+
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
   return (
@@ -33,7 +25,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0C0D0D",
+    // backgroundColor: "#0C0D0D",
+    backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
     padding: 24
